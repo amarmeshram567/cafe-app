@@ -51,7 +51,7 @@ const VisitPage = () => {
 
                         {/* Title */}
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            Welcome to <span className="text-orange-500">The Golden Fork</span>
+                            Welcome to <span className="text-orange-500">Brew & Co.</span>
                         </h1>
 
                         <p className="text-lg text-gray-600 mb-8">
