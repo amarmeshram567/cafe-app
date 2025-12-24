@@ -23,7 +23,7 @@ connectDB();
    MIDDLEWARE
 ====================== */
 const allowedOrigins = [
-    "http://localhost:5173"
+    "https://cafe-app-uheh.vercel.app"
 ];
 
 app.use(cors({
