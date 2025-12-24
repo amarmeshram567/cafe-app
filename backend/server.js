@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 8000;
 // database 
 connectDB()
 
-const allowedOrigins = ['https://cafe-app-client.vercel.app']
+const allowedOrigins = ['http://localhost:5173']
 
 app.use(cors({
     origin: allowedOrigins,
