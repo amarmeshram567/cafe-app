@@ -60,9 +60,9 @@ const FullMenu = () => {
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* Title */}
-                <div className="text-center mb-10">
+                <div className="items-start mb-10">
                     <h1
-                        className="text-4xl md:text-5xl font-bold uppercase text-center"
+                        className="text-3xl md:text-4xl font-bold uppercase"
                         style={{
                             background: "linear-gradient(90deg, #ffffff, #facc15, #f97316)",
                             WebkitBackgroundClip: "text",
@@ -72,10 +72,7 @@ const FullMenu = () => {
                     >
                         Our Menu
                     </h1>
-
-
-
-                    <p className="text-gray-50 mt-2 italic">
+                    <p className="text-gray-50 text-sm mt-2 italic">
                         “Discover our carefully crafted selection of drinks and treats”
                     </p>
                 </div>
@@ -99,7 +96,7 @@ const FullMenu = () => {
                             key={cat.name}
                             onClick={() => setActiveCategory(cat.name)}
                             className={`flex items-center text-gray-800 gap-2 px-5 py-2 rounded-full text-sm transition
-                ${activeCategory === cat.name
+                                ${activeCategory === cat.name
                                     ? "bg-orange-500 text-white"
                                     : "bg-white hover:bg-orange-100"
                                 }`}
