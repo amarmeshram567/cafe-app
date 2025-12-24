@@ -10,18 +10,14 @@ const addressRouter = require("../routes/addressRoutes");
 const orderRouter = require("../routes/orderRoutes");
 const menuItemRouter = require("../routes/menuItemRoutes");
 const sellerRouter = require("../routes/sellerRoutes");
-const connectDB = require("../config/db"); // ✅ FIXED
+const connectDB = require("../config/db");
 
 const app = express();
 
-/* ======================
-   DATABASE
-====================== */
+// database
 connectDB();
 
-/* ======================
-   MIDDLEWARE
-====================== */
+
 const allowedOrigins = [
     "https://cafe-app-uheh.vercel.app"
 ];
@@ -31,20 +27,17 @@ app.use(cors({
     credentials: true
 }));
 
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-/* ======================
-   TEST ROUTE
-====================== */
+
 app.get("/", (req, res) => {
     res.send("Cafe App Backend is running 🚀");
 });
 
-/* ======================
-   ROUTES
-====================== */
 app.use("/api/users", userRouter);
 app.use("/api/menu", menuRouter);
 app.use("/api/table-bookings", tableRouter);
@@ -53,7 +46,5 @@ app.use("/api/orders", orderRouter);
 app.use("/api/menu-items", menuItemRouter);
 app.use("/api/seller", sellerRouter);
 
-/* ======================
-   EXPORT (NO listen)
-====================== */
+
 module.exports = app;
