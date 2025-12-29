@@ -89,7 +89,7 @@ const Orders = () => {
                         {/* Address */}
                         <div className="text-sm text-black/60 max-w-xs">
                             <p className="text-orange-500 font-semibold uppercase">
-                                {order.user.name}
+                                {order.user?.name || "Unknown User"}
                             </p>
                             {
                                 order.address ? (
